@@ -2,7 +2,27 @@ import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import ix1 from '../assets/601.png';
+import ix2 from '../assets/602.png';
+import ix3 from '../assets/603.png';
+import ix4 from '../assets/604.png';
+import ix5 from '../assets/605.png';
+// deeper 
+import deeper1 from '../assets/deep1.png';
+import deeper2 from '../assets/deep2.png';
+import deeper3 from '../assets/deep3.png';
+import deeper4 from '../assets/deep4.jpg';
+import deeper5 from '../assets/deep5.jpg';
 
+import n1 from '../assets/n1.png';
+import n2 from '../assets/n2.png';
+import n3 from '../assets/n3.png';
+
+
+import z1 from '../assets/z1.png';
+import z2 from '../assets/z2.png';
+import z3 from '../assets/z3.png';
+import z4 from '../assets/z4.png';
 interface ProjectsProps {
   language: 'ar' | 'en';
 }
@@ -47,75 +67,82 @@ export function Projects({ language }: ProjectsProps) {
   const projects: Project[] = [
     {
       id: 1,
-      nameAr: 'منصة إدارة المشاريع المتقدمة',
-      nameEn: 'Advanced Project Management Platform',
-      descriptionAr: 'نظام شامل لإدارة المشاريع والفرق',
-      descriptionEn: 'Comprehensive system for project and team management',
-      problemAr: 'الشركات تواجه صعوبة في تتبع المشاريع المتعددة وتنسيق الفرق الموزعة جغرافياً',
-      problemEn: 'Companies struggle to track multiple projects and coordinate distributed teams',
-      solutionAr: 'منصة متكاملة توفر لوحة تحكم في الوقت الفعلي، إدارة المهام، تتبع الوقت، وتقارير تحليلية متقدمة',
-      solutionEn: 'Integrated platform with real-time dashboard, task management, time tracking, and advanced analytics',
-      technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Redis', 'Docker'],
+      nameAr: '60ix',
+      nameEn: '60ix',
+      descriptionAr: '60IX منصة رقمية متخصصة في منتجات وخدمات رعاية الحيوانات الأليفة والخيول، بتجمع كل احتياجات المستخدمين في مكان واحد بتجربة استخدام بسيطة ومنظمة.',
+      descriptionEn: '60IX is a digital platform specializing in pet and livestock products and services, bringing all user needs together in one place with a simple and organized user experience.',
+      problemAr: 'السوق كان بيعاني من تشتت الخدمات والمنتجات وعدم وجود منصة موثوقة تجمع مزودي الخدمات ومحبي الحيوانات في مكان واحد.',
+      problemEn: 'The market was suffering from the fragmentation of services and products, and the absence of a reliable platform to bring service providers and pet lovers together.',
+      solutionAr: 'تصميم وتنفيذ منصة موحدة بتربط المستخدمين بمزودي الخدمات والمنتجات، مع واجهة سهلة وتنظيم واضح يسهل الوصول لكل الخدمات بسرعة.',
+      solutionEn: 'Design and implementation of a unified platform connecting users with service providers and pet lovers, with a simple and organized interface making it easy to access all services quickly.',
+      technologies: ['Vue.Js', 'Nuxt.Js', 'TypeScript', 'Rest API', 'Pinia', 'Tailwind CSS', 'Socket.io', 'Laravel', 'MySQL', 'AWS'],
       images: [
-        'https://images.unsplash.com/photo-1665470909939-959569b20021?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaWNhdGlvbiUyMGRhc2hib2FyZHxlbnwxfHx8fDE3Njg1ODg4NTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
-        'https://images.unsplash.com/photo-1750056393300-102f7c4b8bc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXNpZ24lMjBtb2NrdXB8ZW58MXx8fHwxNzY4NTc3OTI1fDA&ixlib=rb-4.1.0&q=80&w=1080',
-        'https://images.unsplash.com/photo-1684569547117-e2d19fc6d796?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB1aSUyMGRlc2lnbnxlbnwxfHx8fDE3Njg0NzQyNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+        ix3,
+
+        ix2,
+        ix4,
+        ix5,
+        ix1,
+
       ],
-      link: 'https://example.com/project1',
+      link: 'https://60ix.com/',
     },
     {
       id: 2,
-      nameAr: 'تطبيق التجارة الإلكترونية المتعدد البائعين',
-      nameEn: 'Multi-Vendor E-commerce Application',
-      descriptionAr: 'منصة تجارة إلكترونية شاملة للبائعين المتعددين',
-      descriptionEn: 'Comprehensive multi-vendor e-commerce platform',
-      problemAr: 'البائعون الصغار يحتاجون إلى منصة موثوقة وسهلة الاستخدام لبيع منتجاتهم عبر الإنترنت',
-      problemEn: 'Small vendors need a reliable and easy-to-use platform to sell their products online',
-      solutionAr: 'منصة متكاملة تشمل واجهة للعملاء، لوحة تحكم للبائعين، نظام دفع آمن، وإدارة المخزون الذكية',
-      solutionEn: 'Integrated platform with customer interface, vendor dashboard, secure payment system, and smart inventory management',
-      technologies: ['Next.js', 'Tailwind CSS', 'Stripe', 'MongoDB', 'AWS S3'],
+      nameAr: 'Contracting System',
+      nameEn: 'Contracting System',
+      descriptionAr: 'Contracting System هو نظام رقمي متقدّم للذكاء الاصطناعي والرؤية الحاسوبية بيحوّل البيانات البصرية (صور/فيديو) إلى تحليلات ورؤى ذكية تُستخدم في الأتمتة واتخاذ القرار في الأعمال.',
+      descriptionEn: 'Contracting System is an advanced digital system for artificial intelligence and computer vision that converts visual data (images/videos) into smart analyses and intelligent views used in automation and decision-making in business.',
+      problemAr: 'كان في صعوبة في تحليل البيانات البصرية الكبيرة تلقائيًا بدون تدخل بشري دقيق، خصوصًا في التطبيقات الصناعية/المراقبة حيث البيانات الضخمة بتحتاج تحليل فوري وذكي.',
+      problemEn: 'It was difficult to automatically analyze large visual data without precise human intervention, especially in industrial/monitoring applications where large data requires immediate and smart analysis.',
+      solutionAr: 'قدّمنا واجهة ونظام متكامل بيستخدم تقنيات الذكاء الاصطناعي لتحليل الصور والفيديو realtime، وبيدّي نتائج فورية ورؤى واضحة بدل التحليل اليدوي التقليدي.',
+      solutionEn: 'We provided an integrated interface and system that uses artificial intelligence techniques to analyze images and videos in real-time, and provides immediate and clear results instead of traditional manual analysis.',
+      technologies: ['Vue.Js', 'Naive UI', 'TypeScript',  'Tailwind CSS', 'MongoDB', 'Node.js', 'Socket.io', 'AWS S3'],
       images: [
-        'https://images.unsplash.com/photo-1732258355931-f573ca2eaee3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBwbGF0Zm9ybSUyMHNjcmVlbnxlbnwxfHx8fDE3Njg1ODg4NTR8MA&ixlib=rb-4.1.0&q=80&w=1080',
-        'https://images.unsplash.com/photo-1661246627162-feb0269e0c07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzY4NTQ3MDg2fDA&ixlib=rb-4.1.0&q=80&w=1080',
-        'https://images.unsplash.com/photo-1741466071728-cc5691bfb535?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHdvcmtzcGFjZSUyMHNldHVwfGVufDF8fHx8MTc2ODUxNTkzNnww&ixlib=rb-4.1.0&q=80&w=1080',
+        deeper1,
+        deeper2,
+        deeper3,
+        deeper4,
+        deeper5,
       ],
-      link: 'https://example.com/project2',
+      link: 'https://v2-deeper-vision-system.codebase-product.com/',
     },
     {
       id: 3,
-      nameAr: 'تطبيق الهاتف للصحة واللياقة',
-      nameEn: 'Health & Fitness Mobile App',
-      descriptionAr: 'تطبيق شامل لتتبع الصحة واللياقة البدنية',
-      descriptionEn: 'Comprehensive health and fitness tracking application',
-      problemAr: 'المستخدمون يجدون صعوبة في الالتزام بأهداف اللياقة البدنية وتتبع تقدمهم',
-      problemEn: 'Users struggle to stick to fitness goals and track their progress',
-      solutionAr: 'تطبيق تفاعلي يوفر خطط تمرين مخصصة، تتبع التغذية، تحليلات الأداء، ومدرب افتراضي مدعوم بالذكاء الاصطناعي',
-      solutionEn: 'Interactive app with personalized workout plans, nutrition tracking, performance analytics, and AI-powered virtual coach',
-      technologies: ['React Native', 'Firebase', 'TensorFlow', 'HealthKit', 'GraphQL'],
+      nameAr: 'Nejoum Al-Alam (NALGRP)',
+      nameEn: 'Nejoum Al-Alam (NALGRP)',
+      descriptionAr: ' Nejoum Al-Alam (NALGRP) موقع تجاري لخدمات استيراد السيارات من المزادات الأمريكية وتسهيل نقلها إلى الموانئ، مع واجهة عرض خدمات واضحة للمستخدمين.',
+      descriptionEn: 'Nejoum Al-Alam (NALGRP) is a commercial website for importing cars from American auctions and facilitating their transfer to ports, with a clear service display interface for users.',
+      problemAr: 'العملاء كانوا بيواجهوا صعوبة في استيراد سيارات من المزادات الأمريكية وإجراءات الشحن والتخليص بشكل سهل وموثوق.',
+      problemEn: 'Customers struggled with importing cars from American auctions and facilitating their transfer to ports, with a clear service display interface for users.',
+      solutionAr: ' قمنا ببناء منصة منظمة بتعرض الخدمات بوضوح (استيراد + شحن + دعم) لتسهيل العملية بالكامل وتقديم تجربة مستخدم بسيطة وموثوقة.',
+      solutionEn: 'We built a platform that displays services clearly (import + loading + support) to make the process easy and reliable for users.',
+      technologies: ['Vue.Js', 'PrimeVue', 'TypeScript', 'Rest API', 'Vuex', 'Tailwind CSS', 'Firebase', 'Laravel', 'MySQL'],
       images: [
-        'https://images.unsplash.com/photo-1661246627162-feb0269e0c07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzY4NTQ3MDg2fDA&ixlib=rb-4.1.0&q=80&w=1080',
-        'https://images.unsplash.com/photo-1665043548008-82dc5e992df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsJTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc2ODU4OTIzNXww&ixlib=rb-4.1.0&q=80&w=1080',
-        'https://images.unsplash.com/photo-1658806300183-342fe517d68f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwYWJzdHJhY3QlMjBhcnR8ZW58MXx8fHwxNzY4NTg5MjM2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+        n1,
+        n2,
+        n3,
       ],
-      link: 'https://example.com/project3',
+      link: 'https://nalgrp.net/',
     },
     {
       id: 4,
-      nameAr: 'نظام إدارة علاقات العملاء للشركات',
-      nameEn: 'Enterprise CRM System',
-      descriptionAr: 'نظام متطور لإدارة علاقات العملاء',
-      descriptionEn: 'Advanced customer relationship management system',
-      problemAr: 'الشركات الكبيرة تعاني من تشتت بيانات العملاء وضعف التواصل بين الأقسام',
-      problemEn: 'Large companies suffer from scattered customer data and poor inter-department communication',
-      solutionAr: 'نظام مركزي موحد لإدارة العملاء، أتمتة المبيعات، تتبع التفاعلات، وتحليلات ذكاء الأعمال',
-      solutionEn: 'Unified central system for customer management, sales automation, interaction tracking, and business intelligence analytics',
-      technologies: ['Vue.js', 'Python', 'Django', 'Elasticsearch', 'Kubernetes'],
+      nameAr: 'Zalameh.app',
+      nameEn: 'Zalameh.app',
+      descriptionAr: 'Zalameh.app هو موقع/منصة رقمية بتجمع متاجر محلية وعروض منتجات وخدمات في فئات مختلفة (ألبسة، أكل، إلكترونيات، خدمات، إلخ) علشان المستخدم يقدر يتصفح المتاجر بسهولة ويلاقي اللي يحتاجه.',
+      descriptionEn: 'Zalameh.app is a digital platform that brings local stores and product and service offers in different categories (clothing, food, electronics, services, etc.) so that the user can easily browse the stores and find what he needs.',
+      problemAr: 'العديد من أصحاب المشاريع الصغيرة ماعندهمش مكان مركزي لعرض منتجاتهم وخدماتهم أونلاين بشكل منظم وجذاب.',
+      problemEn: 'Many small project owners do not have a central place to display their products and services online in an organized and attractive way.',
+      solutionAr: 'قمنا ببناء منصة منظمة لعرض المتاجر وفئات المنتجات بطريقة سهلة للتصفح مع دعوة أصحاب المشاريع للانضمام، مما سهل الوصول للـcustomers وعرض الخدمات بشكل احترافي.',
+      solutionEn: 'We built a platform that displays stores and product categories in an organized and attractive way, inviting project owners to join, making it easy for customers to access and display services professionally.',
+      technologies: ['Vue.js', 'Python', 'Django', 'Tailwind CSS', 'Firebase', 'Stripe', 'AWS'],
       images: [
-        'https://images.unsplash.com/photo-1582138825658-fb952c08b282?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50JTIwd29ya3NwYWNlfGVufDF8fHx8MTc2ODUyODgxMHww&ixlib=rb-4.1.0&q=80&w=1080',
-        'https://images.unsplash.com/photo-1658274474930-bb27a64022c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjBjb2RlJTIwc2NyZWVufGVufDF8fHx8MTc2ODU0MzI5OHww&ixlib=rb-4.1.0&q=80&w=1080',
-        'https://images.unsplash.com/photo-1665470909939-959569b20021?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaWNhdGlvbiUyMGRhc2hib2FyZHxlbnwxfHx8fDE3Njg1ODg4NTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
+        z1,
+        z2,
+        z3,
+        z4,
       ],
-      link: 'https://example.com/project4',
+      link: 'https://zalameh.app/',
     },
   ];
 
@@ -192,10 +219,9 @@ export function Projects({ language }: ProjectsProps) {
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className={`flex flex-col ${
-                index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-              } gap-12 lg:gap-16 items-center`}>
-                
+              <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                } gap-12 lg:gap-16 items-center`}>
+
                 {/* Project Images Gallery */}
                 <div className="w-full lg:w-1/2">
                   <div className="relative">
@@ -206,7 +232,7 @@ export function Projects({ language }: ProjectsProps) {
                         whileHover={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
                       />
-                      
+
                       <AnimatePresence mode="wait">
                         <motion.div
                           key={currentImageIndex[project.id] || 0}
@@ -252,11 +278,10 @@ export function Projects({ language }: ProjectsProps) {
                             <button
                               key={imgIndex}
                               onClick={() => setCurrentImageIndex((prev) => ({ ...prev, [project.id]: imgIndex }))}
-                              className={`h-2 rounded-full transition-all ${
-                                (currentImageIndex[project.id] || 0) === imgIndex
-                                  ? 'w-8 bg-white'
-                                  : 'w-2 bg-white/50 hover:bg-white/70'
-                              }`}
+                              className={`h-2 rounded-full transition-all ${(currentImageIndex[project.id] || 0) === imgIndex
+                                ? 'w-8 bg-white'
+                                : 'w-2 bg-white/50 hover:bg-white/70'
+                                }`}
                             />
                           ))}
                         </div>

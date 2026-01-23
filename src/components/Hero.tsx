@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import portfolio from '../assets/portfolio.jpeg'
 
 interface HeroProps {
   language: 'ar' | 'en';
@@ -200,10 +201,10 @@ export function Hero({ language }: HeroProps) {
                 animate={{ rotate: [0, 5, 0, -5, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
               />
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1681296307281-d046603724c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwcGF0dGVybiUyMHRleHR1cmV8ZW58MXx8fHwxNzY4NTg5MjM1fDA&ixlib=rb-4.1.0&q=80&w=1080"
+              <img
+                src={portfolio}
                 alt="Technology"
-                className="relative rounded-3xl w-full h-[500px] object-cover border border-white/20"
+                className="relative rounded-3xl w-full h-[500px] object-contain border border-white/20"
               />
             </div>
           </motion.div>
